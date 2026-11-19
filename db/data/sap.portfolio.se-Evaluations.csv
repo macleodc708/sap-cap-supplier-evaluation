@@ -1,0 +1,7 @@
+ID;supplier_ID;supplierName;evaluationDate;quality;delivery;price;communication;overallScore;rating_code;comment;createdBy;modifiedBy
+b1000000-0000-4000-8000-000000000001;1000033;Capital Fasteners Inc;2026-07-15;5;4;4;5;4.50;A;Sehr gute Qualität, Lieferung einmal knapp verspätet.;anna;anna
+b1000000-0000-4000-8000-000000000002;1000033;Capital Fasteners Inc;2026-10-02;4;5;4;4;4.30;A;;ben;ben
+b1000000-0000-4000-8000-000000000003;1000035;T C E Systems Inc;2026-09-10;3;2;4;3;2.90;C;Mehrfach Lieferverzug im Q3.;anna;anna
+b1000000-0000-4000-8000-000000000004;1000035;T C E Systems Inc;2026-11-03;3;3;4;3;3.20;B;Liefertreue verbessert.;ben;ben
+b1000000-0000-4000-8000-000000000005;1018;Bechtle AG Kriek street;2026-08-21;4;4;3;4;3.80;B;;anna;anna
+b1000000-0000-4000-8000-000000000006;1000039;Horizon Air;2026-05-30;2;2;3;2;2.20;C;Qualitätsmängel, Reklamationen offen.;david;david

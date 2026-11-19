@@ -1,0 +1,4 @@
+code;name;descr;minScore;criticality
+A;Preferred;Preferred supplier;4.00;3
+B;Acceptable;Acceptable supplier;3.00;2
+C;Critical;Supplier needs action;0.00;1

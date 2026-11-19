@@ -1,0 +1,77 @@
+{
+  "name": "supplier-evaluation",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@sap/cds": "^10",
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^1.0.2",
+    "@cap-js/sqlite": "^3",
+    "@eslint/js": "^9.39.5",
+    "@sap/cds-dk": "^10.2.1",
+    "eslint": "^9.39.5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch": "cds watch",
+    "watch:sandbox": "cds watch --profile sandbox",
+    "test": "node --test --test-reporter=spec \"test/**/*.test.js\"",
+    "lint": "eslint ."
+  },
+  "private": true,
+  "cds": {
+    "evaluation": {
+      "weights": {
+        "quality": 0.35,
+        "delivery": 0.3,
+        "price": 0.2,
+        "communication": 0.15
+      }
+    },
+    "requires": {
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "[sandbox]": {
+          "credentials": {
+            "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+          }
+        }
+      },
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "anna": {
+            "password": "demo",
+            "roles": [
+              "Purchaser"
+            ]
+          },
+          "ben": {
+            "password": "demo",
+            "roles": [
+              "Purchaser"
+            ]
+          },
+          "david": {
+            "password": "demo",
+            "roles": [
+              "Purchaser",
+              "PurchasingManager"
+            ]
+          },
+          "*": false
+        }
+      }
+    }
+  },
+  "description": "Lieferantenbewertung als Side-by-Side-Erweiterung zu SAP S/4HANA – SAP CAP, Remote Service (API_BUSINESS_PARTNER), Fiori Elements",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
+}
